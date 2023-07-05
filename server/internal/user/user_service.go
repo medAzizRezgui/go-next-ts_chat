@@ -82,8 +82,8 @@ func (s *service) Login(c context.Context, req *LoginUserReq) (*LoginUserRes, er
 	}
 
 	return &LoginUserRes{
-		ID:          strconv.Itoa(int(u.ID)),
 		accessToken: ss,
 		Username:    u.Username,
+		ID:          strconv.Itoa(int(u.ID)),
 	}, nil
 }
